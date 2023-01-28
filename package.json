@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "lerna": "^6.4.1"
+  },
+  "name": "chat-gpt-smart-home-assistant",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "lerna run start"
+  }
+}
