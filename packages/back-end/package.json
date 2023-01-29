@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"
@@ -11,6 +12,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "chatgpt": "^3.5.1",
+    "express": "^4.18.2",
+    "puppeteer": "^19.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }
