@@ -1,0 +1,26 @@
+#info{
+    font-size: 32px;
+    text-align: center;
+    padding: 15px;
+}
+
+.chatgpt-com{
+    padding: 10px;
+    font-size: 24px;
+}
+
+.chatgpt-com span:nth-child(1){
+    display: inline-block;
+    width: 200px;
+}
+
+.chatgpt-com span:nth-child(2)::before{
+    content: ": ";
+}
+
+#devices{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
