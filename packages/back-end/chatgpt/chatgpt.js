@@ -24,12 +24,19 @@ chatGPT.prototype.sendCommand = async function (command) {
         throw "chatGPT is not ready!"
     }
 
-    this.ready = false
-    this.res = await this.api.sendMessage(command, {
-        conversationId: this.res.conversationId,
-        parentMessageId: this.res.parentMessageId
-    })
-    this.ready = true
+    console.log(this.res)
+    
+    try{
+        this.ready = false
+        this.res = await this.api.sendMessage(command, {
+            conversationId: this.res.conversationId,
+            parentMessageId: this.res.messageId
+        })
+    }catch(e){
+        throw e
+    }finally{
+        this.ready = true
+    }
 
     return this.res.response
 }
