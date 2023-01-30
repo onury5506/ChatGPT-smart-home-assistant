@@ -10,6 +10,13 @@ const chat = new chatGPT(process.env.OPENAI_EMAIL,process.env.OPENAI_PASSWORD)
 
 chat.init().catch(console.error)
 
+app.use((req,res, next) =>{
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, PATCH");
+    next();
+});
+
 app.get('/', (req, res) => {
     res.send('Hello World!')
 })
