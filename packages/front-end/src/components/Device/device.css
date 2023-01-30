@@ -1,0 +1,21 @@
+.device{
+    display: inline-flex;
+    width: 200px;
+    flex-direction: column;
+    align-items: center;
+    border: 1px black solid;
+    padding: 10px 0px;
+    gap: 10px;
+    border-radius: 30px;
+    box-shadow: 1px 1px 2px 2px;
+    font-size: 20px;
+    background-color: white;
+}
+
+.device img{
+    width: 50%;
+}
+
+.device img.off{
+    filter: grayscale(100%) sepia(31%) saturate(0%) contrast(42%);
+}
